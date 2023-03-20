@@ -1,0 +1,4 @@
+creciente([X]).
+creciente([X,Y|Ys]):-
+	X =< Y,
+	creciente([Y|Ys]).

@@ -1,0 +1,13 @@
+binario(0,[0]).
+binario(1,[1]).
+binario(X,L):-
+	X > 1,
+	bin_aux(X,2,Cociente,Resto),
+	binario(Cociente,L1),
+	append(L1,[Resto],L),
+	!.
+	
+
+bin_aux(X,Y,Coci,Rest):-
+	Coci is X // Y,
+	Rest is X mod Y.

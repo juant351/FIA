@@ -1,0 +1,4 @@
+nuevaLista(X,[X|_],[]).
+
+nuevaLista(X,[Y|Ys],[Y|Zs]):-
+	nuevaLista(X,Ys,Zs).

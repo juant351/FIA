@@ -1,0 +1,6 @@
+estudia(pedro).
+not(estudia(juan)),afortunado(juan).
+
+loteria(Z):-afortunado(Z).
+feliz(X):-aprueba(X,inteligencia),loteria(X).
+aprueba(T,_):-estudia(T);afortunado(T).

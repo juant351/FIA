@@ -1,0 +1,6 @@
+mujer(ana).
+mujer(X):-madre(X,_).
+
+bueno(marido(ana)).
+
+gusta(Z,T):-bueno(T),madre(Z,T).

@@ -1,0 +1,8 @@
+enlace(a,b,3).
+enlace(a,c,2).
+enlace(c,d,4).
+enlace(c,e,5).
+enlace(b,f,9).
+
+ruta(X,Y,T):-enlace(X,Y,T).
+ruta(X,Y,T):-enlace(Z,Y,T1),ruta(X,Z,T2), T is T1 + T2.

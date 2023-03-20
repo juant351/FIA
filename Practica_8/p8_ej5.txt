@@ -1,0 +1,2 @@
+insertarParcial(X,Ys,[X|Ys]).
+insertarParcial(X,[Y|Ys],[Y|Zs]):-insertarParcial(X,Ys,Zs).

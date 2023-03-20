@@ -1,0 +1,9 @@
+nuevaLista([],_,[]).
+
+nuevaLista([Cabeza|Cola],X,L1):-
+	member(X,Cola),
+	Cabeza =\= X,
+	append(Cabeza,L1,L2),
+	nuevaLista(Cola,X,L2).
+	
+	

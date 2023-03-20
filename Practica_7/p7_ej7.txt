@@ -1,0 +1,19 @@
+transporte_precio(roma,200).
+transporte_precio(londres,250).
+transporte_precio(tunez,150).
+
+noche_precio(hotel,roma,250).
+noche_precio(hotel,londres,150).
+noche_precio(hotel,tunez,100).
+noche_precio(hostal,roma,150).
+noche_precio(hostal,londres,100).
+noche_precio(hostal,tunez,80).
+noche_precio(camping,roma,100).
+noche_precio(camping,londres,50).
+noche_precio(camping,tunez,50).
+
+viaje(Num_noches,Alojamiento,Ciudad,Precio):-
+	transporte_precio(Ciudad,T),
+	noche_precio(Alojamiento,Ciudad,Y),
+	Precio is (Y * Num_noches) + T.
+	

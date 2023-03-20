@@ -1,0 +1,11 @@
+separar([],[],[]).
+
+separar([Cabeza|Cola],X,Y):-
+	Cabeza >= 0,
+	append(Cabeza,X,X1),
+	separar(Cola,X1,Y).
+
+separar([Cabeza|Cola],X,Y):-
+	Cabeza < 0,
+	append(Cabeza,Y,Y1),
+	separar(Cola,X,Y1).

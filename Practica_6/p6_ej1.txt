@@ -1,0 +1,13 @@
+derecha_de(lupa,bombilla).
+derecha_de(taza,coche).
+derecha_de(balanza,taza).
+derecha_de(llave,tortuga).
+derecha_de(semaforo,llave).
+derecha_de(martillo,semaforo).
+encima_de(bombilla,coche).
+encima_de(coche,tortuga).
+encima_de(taza,semaforo).
+encima_de(balanza,martillo).
+encima_de(lupa,taza).
+izquierda_de(X,Y) :- derecha_de(Y,X).
+debajo_de(Z,T) :- encima_de(T,Z).

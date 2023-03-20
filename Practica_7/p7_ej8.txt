@@ -1,0 +1,24 @@
+jefe_de(dirGeneral,respCalidad).
+jefe_de(respCalidad,respTesoreria).
+jefe_de(respCalidad,respVentas).
+jefe_de(respCalidad,respComercial).
+jefe_de(respTesoreria,asesor).
+jefe_de(asesor,contable).
+jefe_de(respVentas,operario1).
+jefe_de(respVentas,operario2).
+jefe_de(operario1,reparto1).
+jefe_de(operario2,reparto2).
+jefe_de(respComercial,vendedor1).
+jefe_de(respComercial,vendedor2).
+
+depende_de(X,Y):- jefe_de(Y,X).
+depende_de(X,Y):- jefe_(X,Z), depende_de(Z,Y).
+
+cadena(Persona1,Persona2,Nivel):-
+	jefe_de(Persona1,Persona2),
+	Nivel is 1.
+cadena(Persona1,Persona2,Nivel):-
+	jefe_de(Persona1,Persona3),
+	cadena(Persona3,Persona2,Nivel2),
+	Nivel is Nivel2 + 1.
+	

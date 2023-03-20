@@ -1,0 +1,22 @@
+derecha_de(lupa,bombilla).
+derecha_de(taza,coche).
+derecha_de(balanza,taza).
+derecha_de(llave,tortuga).
+derecha_de(semaforo,llave).
+derecha_de(martillo,semaforo).
+derecha(Q,W) :- derecha_de(Q,W).
+derecha(Q,W) :- derecha_de(Q,E),derecha(E,W).
+encima_de(bombilla,coche).
+encima_de(coche,tortuga).
+encima_de(taza,semaforo).
+encima_de(balanza,martillo).
+encima_de(lupa,taza).
+encima(U,I) :- encima_de(U,I).
+encima(U,I) :- encima_de(U,O),encima(O,I).
+izquierda_de(X,Y) :- derecha_de(Y,X).
+izquierda(G,H) :- izquierda_de(G,H).
+izquierda(G,H) :- izquierda_de(G,J),izquierda(J,H).
+debajo_de(Z,T) :- encima_de(T,Z).
+debajo(C,V) :- debajo_de(C,V).
+debajo(C,V) :- debajo_de(C,B),debajo(B,V).
+

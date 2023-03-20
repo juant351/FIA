@@ -1,0 +1,6 @@
+gusta(juan,X).
+comida(manzanas).
+comida(pollo).
+comida(Z):-come(Y,Z),nomate(Z).
+come(guille,cacahuetes),nomate(cacahuetes).
+come(susana,T):-come(guille,T).

@@ -1,0 +1,13 @@
+burbuja(Lista, Ordenada):-
+	permuta(Lista,NuevaLista),
+	!,
+	burbuja(NuevaLista,Ordenada).
+
+burbuja(Ordenada, Ordenada).
+
+permuta([X, Y|Cola],[Y, X|Cola]):-
+	X > Y.
+
+permuta([X|ColaX],[X|ColaY]):-
+	permuta(ColaX,ColaY).
+	

@@ -1,0 +1,6 @@
+elimina(1,[X|Xs],Xs).
+elimina(N,[X|Xs],[X|L]):-
+	N > 1,
+	N1 is N - 1,
+	elimina(N1,Xs,L).
+	

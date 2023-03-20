@@ -1,0 +1,12 @@
+sumar([],0).
+sumar([X|Xcola],N):-
+	sumar(Xcola,N1),
+	N is N1 + X.
+sumar2([],[],0).
+sumar2([],[X],X).
+sumar2([X],[],X).
+
+sumar2([X|Xcola],[Y|Ycola],N):-
+	sumar(Xcola,N1),
+	sumar(Ycola,N2),
+	N is X + Y + N1 + N2.

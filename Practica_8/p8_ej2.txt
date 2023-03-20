@@ -1,0 +1,4 @@
+longitud([],0).
+longitud([_|X],N):-
+	longitud(X,N1),
+	N is N1 + 1. 
