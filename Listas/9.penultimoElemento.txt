@@ -1,0 +1,12 @@
+penultimo(X,[X,_]).
+penultimo(X,[_,Y|L]):-
+	penultimo(X,[Y|L]).
+
+% Otra manera.
+
+penul(X,L):-
+	concatena(_,[X,_],L).
+
+concatena([],L,L).
+concatena([X|Xs],Y,[X|Zs]):-
+	concatena(Xs,Y,Zs).

@@ -1,0 +1,9 @@
+sumar_lista([X],[X]).
+sumar_lista([X, Y|Ys],R):-
+	R1 is X + Y,
+	sumar_lista(Ys,R2),
+	concatena([R1],R2,R).
+
+concatena([],L,L).
+concatena([X|Xs],Ys,[X|Zs]):-
+	concatena(Xs,Ys,Zs).

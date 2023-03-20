@@ -1,0 +1,8 @@
+longitud_par(L):-
+	longitud(L,N),
+	0 is N mod 2.
+
+longitud([],0).
+longitud([_|Xs],N):-
+	longitud(Xs,N1),
+	N is N1 + 1.

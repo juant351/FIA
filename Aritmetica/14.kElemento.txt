@@ -1,0 +1,6 @@
+elemento_en(1,[X|_],X).
+
+elemento_en(K,[_|Ls],X):-
+	K > 1,
+	K1 is K - 1,
+	elemento_en(K1,Ls,X).

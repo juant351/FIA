@@ -1,0 +1,12 @@
+maximo(X,X,X).
+maximo(X,Y,Z):-
+	X > Y,
+	Z is X.
+maximo(X,Y,Z):- 
+	Y > X,
+	Z is Y.
+
+max(X,Y,X):-
+	X >= Y.
+max(X,Y,Y):-
+	X < Y.

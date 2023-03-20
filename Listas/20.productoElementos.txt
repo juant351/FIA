@@ -1,0 +1,4 @@
+producto([],1).
+producto([X|Xs],N):-
+	producto(Xs,N1),
+	N is N1 * X.

@@ -1,0 +1,9 @@
+max_lista([X],X).
+
+max_lista([X1, X2|Xs],Y):-
+	X1 >= X2,
+	max_lista([X1|Xs],Y).
+
+max_lista([X1, X2|Xs],Y):-
+	X1 < X2,
+	max_lista([X2|Xs],Y).

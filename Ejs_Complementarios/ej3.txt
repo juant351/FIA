@@ -1,0 +1,3 @@
+es_primo(1):-false.
+es_primo(N):-
+	

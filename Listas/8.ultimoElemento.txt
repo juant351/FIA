@@ -1,0 +1,5 @@
+ultimo(_,[]).
+
+ultimo(X,[X]).
+ultimo(X,[_|L]):-
+	ultimo(X,L).

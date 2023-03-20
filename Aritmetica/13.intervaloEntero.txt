@@ -1,0 +1,7 @@
+entre(N,M,N):-
+	N =< M.
+
+entre(N,M,X):-
+	N < M,
+	N1 is N + 1,
+	entre(N1,M,X).

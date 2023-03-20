@@ -1,0 +1,5 @@
+todos_iguales([]).
+todos_iguales([_]).
+todos_iguales([X, Y|Xs]):-
+	X == Y,
+	todos_iguales([Y|Xs]).

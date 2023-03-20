@@ -1,0 +1,22 @@
+ordenaIns([],[]).
+ordenaIns([X|Xs],L1):-
+	ordenaIns(Xs,L2),
+	inserta_3(X,L2,L1).
+
+inserta(X,L1,L2):-
+	selecciona(X,L2,L1).
+
+selecciona(X,[X|Xs],Xs).
+selecciona(X,[Y|Ys],[Y|Zs]):-
+	selecciona(X,Ys,Zs).
+
+inserta_2(X,[Y|Ys],[X, Y|Ys]).
+inserta_2(X,[Y|Ys],[Y|Zs]):-
+	inserta_2(X,Ys,Zs).
+
+inserta_3(X,[],[X]).
+inserta_3(X, [Y|Ys], [X, Y|Ys]):-
+	X =< Y.
+inserta_3(X, [Y|Ys], [Y|Zs]):-
+	X > Y,
+	inserta_3(X,Ys,Zs).

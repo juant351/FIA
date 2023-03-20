@@ -1,0 +1,11 @@
+palindromo(L):-
+	inversa(L,L).
+
+inversa([],[]).
+inversa([X|Xs],L1):-
+	inversa(Xs,L2),
+	concatena(L2,[X],L1).
+
+concatena([],L,L).
+concatena([X|Xs],Y,[X|Zs]):-
+	concatena(Xs,Y,Zs).

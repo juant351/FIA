@@ -1,0 +1,4 @@
+concatena([],L,L).
+concatena([X|Xs],Y,[X|Zs]):-
+	concatena(Xs,Y,Zs).
+

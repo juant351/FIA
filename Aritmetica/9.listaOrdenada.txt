@@ -1,0 +1,5 @@
+lista_ordenada([_]).
+
+lista_ordenada([X1, X2|Xs]):-
+	X1 =< X2,
+	lista_ordenada([X2|Xs]).

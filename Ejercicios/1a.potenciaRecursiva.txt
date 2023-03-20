@@ -1,0 +1,9 @@
+potencia(_,0,1).
+potencia(X,1,X).
+
+potencia(X,N,R):-
+	N > 1,
+	N1 is N - 1,
+	potencia(X,N1,R1),
+	R is R1 * X,
+	!.

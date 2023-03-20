@@ -1,0 +1,4 @@
+suma([],0).
+suma([X|Xs],N):-
+	suma(Xs,N1),
+	N1 is N + X.

@@ -1,0 +1,7 @@
+sumaAcumulada(L1,L2):-
+	sumaAcumulada_aux(L1,0,L2).
+
+sumaAcumulada_aux([],S,[]).
+sumaAcumulada_aux([X|Xs],S,[Y|Ys]):-
+	Y is X + S,
+	sumaAcumulada_aux(Xs,Y,Ys).

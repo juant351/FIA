@@ -1,0 +1,9 @@
+contar(_,[],0).
+
+contar(X,[X|Ls],N):-
+	contar(X,Ls,N1),
+	N is N1 + 1,
+	!.
+contar(X,[_|Ls],N):-
+	contar(X,Ls,N),
+	!.

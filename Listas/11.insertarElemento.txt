@@ -1,0 +1,21 @@
+inserta(X,[Y|Ys],[X, Y|Ys]).
+inserta(X,[Y|Ys],[Y|Zs]):-
+	inserta(X,Ys,Zs).
+
+% Otra manera
+
+inserta_2(X,L1,L2):-
+	selecciona(X,L2,L1).
+
+selecciona(X,[X|L],L).
+selecciona(X,[Y|Ys],[Y|Zs]):-
+	selecciona(X,Ys,Zs).
+
+% Para valores numericos
+
+insertaN(X,[],[X]).
+insertaN(X,[Y|Ys],[X, Y|Ys]):-
+	X =< Y.
+insertaN(X,[Y|Ys],[Y|Zs]):-
+	X > Y,
+	inserta(X,Ys,Zs).

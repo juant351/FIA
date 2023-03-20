@@ -1,0 +1,2 @@
+pertenece(X,[X|_]).
+pertenece(X,[_|Ys]):- pertenece(X, Ys).

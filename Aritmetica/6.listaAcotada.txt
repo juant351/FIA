@@ -1,0 +1,15 @@
+lista_acotada(L):-
+	longitud(L,N),
+	lista_acotada_aux(L,N).
+
+
+
+longitud([],0).
+longitud([_|Xs],N):-
+	longitud(Xs,N1),
+	N is N1 + 1.
+
+lista_acotada_aux([],_).
+lista_acotada_aux([X|Xs],N):-
+	X < N,
+	lista_acotada_aux(Xs,N).

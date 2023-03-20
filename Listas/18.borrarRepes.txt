@@ -1,0 +1,27 @@
+borra_repes([],[]).
+
+borra_repes([X|Xs],[X|Ys]):-
+	not(miembro(X,Xs)),
+	borra_repes(Xs,Ys).
+borra_repes([X|Xs],Y):-
+	miembro(X,Xs),
+	borra_repes(Xs,Y).
+
+miembro(X,[X|_]).
+miembro(X,[_|Y]):-
+	miembro(X,Y).
+
+% Con corte
+
+borra_repes_2([],[]):-!
+borra_repes_2([X|Xs],[X|Ys]):-
+	not(miembro_2(X,Xs)),
+	borra_repes_2(Xs,Ys).
+borra_repes_2([X|Xs],Y):-
+	miembro_2(X,Xs),
+	!,
+	borra_repes_2(Xs,Y).
+
+miembro_2(X,[X|_]):-!
+miembro_2(X,[_|Y]):-
+	miembro_2(X,Y).

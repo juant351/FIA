@@ -1,0 +1,9 @@
+borrar(_,[],[]):-!.
+
+borrar(X,[X|L1],L2):-
+	borrar(X,L1,L2),
+	!.
+
+borrar(X,[Y|Ys],[Y|Zs]):-
+	borrar(X,Ys,Zs).
+	

@@ -1,0 +1,4 @@
+rotar_derecha([],[]).
+
+rotar_derecha(R,[X|Y]):- 
+	append(Y,[X], R).

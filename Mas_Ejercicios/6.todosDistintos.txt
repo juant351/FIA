@@ -1,0 +1,8 @@
+distintos([]).
+distintos([X|Xs]):-
+	not(miembro(X,Xs)),
+	distintos(Xs).
+
+miembro(X,[X|_]).
+miembro(X,[_|Ys]):-
+	miembro(X,Ys).

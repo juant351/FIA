@@ -1,0 +1,16 @@
+productosDeMulti5(I,S,Factor,P):-
+	I =< S,
+	0 is I mod 5,
+	producto(I,Factor,P).
+
+productosDeMulti5(I,S,Factor,P):-
+	I =< S,
+	I1 is I + 1,
+	productosDeMulti5(I1,S,Factor,P).
+
+producto(X,1,X).
+producto(X,Y,R):-
+	Y > 1,
+	Y1 is Y - 1,
+	producto(X,Y1,R1),
+	R is R1 + X.

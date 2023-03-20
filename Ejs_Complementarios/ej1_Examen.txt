@@ -1,0 +1,4 @@
+potencia(_,0,1).
+
+potencia(X,Y,N):-
+	N is X ^ Y.

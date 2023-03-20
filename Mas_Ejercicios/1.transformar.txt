@@ -1,0 +1,12 @@
+cifras_lista(X,L):-
+	X >= 10,
+	!,
+	N is X mod 10,
+	X1 is X//10,
+	cifras_lista(X1,L1),
+	concatena(L1,[N],L).
+cifras_lista(X,[X]).
+
+concatena([],L,L).
+concatena([X|Xs],Ys,[X|Zs]):-
+	concatena(Xs,Ys,Zs).

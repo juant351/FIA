@@ -1,0 +1,10 @@
+mezcla([],X,X):-!.
+mezcla(X,[],X):-!.
+
+mezcla([X|Xs],[Y|Ys],[X|L]):-
+	X < Y,
+	!,
+	mezcla(Xs,[Y|Ys],L).
+
+mezcla([X|Xs],[Y|Ys],[Y|L]):-
+	mezcla([X|Xs],Ys,L).

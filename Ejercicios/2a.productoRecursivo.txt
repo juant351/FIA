@@ -1,0 +1,8 @@
+producto(X,1,X).
+
+producto(X,Y,R):-
+	Y > 1,
+	Y1 is Y - 1,
+	producto(X,Y1,R1),
+	R is R1 + X,
+	!.

@@ -1,0 +1,9 @@
+mcd(X,X,X).
+
+mcd(X,Y,Z):-
+	X > Y,
+	X1 is X - Y,
+	mcd(X1,Y,Z).
+mcd(X,Y,Z):-
+	X < Y,
+	mcd(Y,X,Z).

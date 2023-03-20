@@ -1,0 +1,7 @@
+sublista(L1,L2):-
+	concatena(_,L3,L2),
+	concatena(L1,_,L3).
+
+concatena([],L,L).
+concatena([X|Xs],Y,[X|Zs]):-
+	concatena(Xs,Y,Zs).

@@ -1,0 +1,4 @@
+inversa([],[]).
+inversa([X|Xs],L1):-
+	inversa(Xs,L2),
+	append(L2,[X],L1).

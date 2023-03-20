@@ -1,0 +1,6 @@
+subconjunto([],[]).
+
+subconjunto([X|L1],[X|L2]):-
+	subconjunto(L1,L2).
+subconjunto([_|L1],L2):-
+	subconjunto(L1,L2).

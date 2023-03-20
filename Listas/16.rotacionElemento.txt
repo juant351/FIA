@@ -1,0 +1,2 @@
+rota([X|Xs],L):-
+	concatena(Xs,[X],L).

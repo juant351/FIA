@@ -1,0 +1,7 @@
+rotar_derecha(R,[X|Y]):- append(Y,[X], R).
+
+rota_veces(X,0,X).
+rota_veces(L1,N,R):-
+	N1 is N - 1,
+	rotar_derecha(L1,R1),
+	rota_veces(R1,N1,R).

@@ -1,0 +1,10 @@
+suma_parcial([],0,[]).
+
+suma_parcial([X|L1],N,[X|L2]):-
+	N >= X,
+	N1 is N - X,
+	suma_parcial(L1,N1,L2).
+
+suma_parcial([_|L1],N,L2):-
+	suma_parcial(L1,N,L2).
+	

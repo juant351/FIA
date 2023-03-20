@@ -1,0 +1,5 @@
+suma_elementos([X],X).
+
+suma_elementos([X|Xs],N):-
+	suma_elementos(Xs,N1),
+	N is N1 + X.

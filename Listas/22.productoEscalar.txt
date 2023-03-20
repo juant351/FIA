@@ -1,0 +1,7 @@
+productoEscalar(L1,L2,P):-
+	productoEscalar_aux(L1,L2,0,P).
+
+productoEscalar_aux([],[],P,P).
+productoEscalar_aux([X|Xs],[Y|Ys],P1,P):-
+	P2 is P1 + X * Y,
+	productoEscalar_aux(Xs,Ys,P2,P).

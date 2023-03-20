@@ -1,0 +1,3 @@
+selecciona(X,[X|Xs],Xs).
+selecciona(X,[Y|Ys],[Y|Zs]):-
+	selecciona(X,Ys,Zs).

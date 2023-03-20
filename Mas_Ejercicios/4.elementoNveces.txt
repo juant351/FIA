@@ -1,0 +1,5 @@
+repetir(X,1,[X]).
+repetir(X,N,[X|Xs]):-
+	N > 1,
+	N1 is N - 1,
+	repetir(X,N1,Xs).

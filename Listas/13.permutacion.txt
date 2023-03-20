@@ -1,0 +1,9 @@
+permutacion([],[]).
+
+permutacion(L1,[X|L2]):-
+	selecciona(X,L1,L3),
+	permutacion(L3,L2).
+
+selecciona(X,[X|Xs],Xs).
+selecciona(X,[Y|Ys],[Y|Zs]):-
+	selecciona(X,Ys,Zs).

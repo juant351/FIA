@@ -1,0 +1,9 @@
+particion(_,[],[],[]).
+
+particion(N,[L|Ls],[L|Xs],Y):-
+	L < N,
+	!,
+	particion(N,Ls,Xs,Y).
+
+particion(N,[L|Ls],X,[L|Ys]):-
+	particion(N,Ls,X,Ys).

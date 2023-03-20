@@ -1,0 +1,6 @@
+lista_de_numeros(X,X,[X]).
+
+lista_de_numeros(N,M,[N|L]):-
+	N < M,
+	N1 is N + 1,
+	lista_de_numeros(N1,M,L).

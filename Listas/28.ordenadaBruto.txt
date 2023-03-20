@@ -1,0 +1,19 @@
+ordenaBruto(L1,L2):-
+	permuta(L1,L2),
+	ordenada(L2),
+	!.
+
+permuta([],[]).
+permuta(L1,[X|L2]):-
+	selecciona(X,L1,L3),
+	permuta(L3,L2).
+
+selecciona(X,[X|Xs],Xs).
+selecciona(X,[Y|Ys],[Y|Zs]):-
+	selecciona(X,Ys,Zs).
+
+ordenada([]).
+ordenada([_]).
+ordenada([X, Y|Xs]):-
+	X < Y,
+	ordenada([Y|Xs]).

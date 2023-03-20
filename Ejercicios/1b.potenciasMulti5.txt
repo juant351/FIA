@@ -1,0 +1,19 @@
+potenciasDeMulti5(I,S,Exp,Num,R):-
+	I =< S,
+	0 is I mod 5,
+	potencia(I,Exp,R),
+	Num is I.
+potenciasDeMulti5(I,S,Exp,Num,R):-
+	I =< S,
+	I1 is I + 1,
+	potenciasDeMulti5(I1,S,Exp,Num,R).
+
+potencia(_,0,1).
+potencia(X,1,X).
+
+potencia(X,N,R):-
+	N > 1,
+	N1 is N - 1,
+	potencia(X,N1,R1),
+	R is R1 * X,
+	!.
